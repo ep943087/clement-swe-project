@@ -397,6 +397,7 @@ class Sorting {
         break;
       case "pyramid":
         this.drawPyramid();
+        break;
       default:
         console.log(this.drawType);
         break;
