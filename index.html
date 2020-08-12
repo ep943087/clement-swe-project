@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: grey;
+      }
+      canvas {
+        width: 100%;
+      }
+    </style>
+
+    <title>Elias Proctor SWE Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Elias Proctor SWE Project</h1>
+
+      <div class="row">
+        <div class="mx-auto">
+          <button class="btn btn-success" id="start">Start</button>
+          <button class="btn btn-danger" id="stop">Stop</button>
+          <button class="btn btn-primary" id="scramble">Scramble</button>
+          <select class="form-control" id="sort-type">
+            <option value="bubble">Bubble Sort</option>
+            <option value="select">Selection Sort</option>
+            <option value="insert">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+          </select>
+          <select class="form-control" id="sort-size">
+            <option value="25">25 Items</option>
+            <option value="50">50 Items</option>
+            <option value="100">100 Items</option>
+            <option value="200">200 Items</option>
+            <option value="300">300 Items</option>
+            <option value="400">400 Items</option>
+            <option value="500">500 Items</option>
+          </select>
+          <select class="form-control" id="sort-speed">
+            <option value="1">1x</option>
+            <option value="5">5x</option>
+            <option value="10">10x</option>
+            <option value="15">15x</option>
+            <option value="30">30x</option>
+          </select>
+          <select class="form-control" id="draw-type">
+            <option value="rectangles">Rectangles</option>
+            <option value="spots">Spots</option>
+            <option value="lines">Lines</option>
+            <option value="spiral">Spiral</option>
+          </select>
+          <label>Color</label>
+          <input type="checkbox" id="color" checked />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-8 col-lg-9 col-md-10 col-sm-11 col-xs-12 mx-auto">
+          <canvas id="myCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="js/sorting.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
