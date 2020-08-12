@@ -13,18 +13,17 @@
       body {
         background-color: grey;
       }
-      canvas {
-        width: 100%;
-      }
     </style>
 
     <title>Elias Proctor SWE Project</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center">Elias Proctor SWE Project</h1>
-
-      <div class="row">
+      <h1 class="text-center mb-3">Elias Proctor SWE Project</h1>
+      <div style="justify-content: center; display: flex;">
+        <canvas class="rounded border border-dark" id="myCanvas"></canvas>
+      </div>
+      <div class="row mt-3">
         <div class="mx-auto">
           <button class="btn btn-success" id="start">Start</button>
           <button class="btn btn-danger" id="stop">Stop</button>
@@ -60,11 +59,6 @@
           </select>
           <label>Color</label>
           <input type="checkbox" id="color" checked />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xl-8 col-lg-9 col-md-10 col-sm-11 col-xs-12 mx-auto">
-          <canvas id="myCanvas"></canvas>
         </div>
       </div>
     </div>

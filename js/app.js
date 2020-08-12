@@ -24,7 +24,8 @@ sortSpeed.onchange = (e) => sortingSim.setSpeed(parseInt(e.target.value));
 drawType.onchange = (e) => sortingSim.setDrawType(e.target.value);
 color.onchange = (e) => sortingSim.setColor();
 
-c.height = 250;
+c.height = 500;
+c.width = 500;
 
 const draw = () => {
   requestAnimationFrame(draw);
