@@ -340,7 +340,6 @@ class Sorting {
     const { c, ctx } = this.initCanvasVariable();
     const { w, h } = this.initWidthHeight();
     for (let i = 0; i < this.list.length; i++) {
-      const hsl = (this.list[i] / this.size) * 360;
       ctx.fillStyle = this.color ? this.getHSL(i) : this.getColor(i);
       ctx.fillRect(i * w, c.height - this.list[i] * h, w, this.list[i] * h);
     }
@@ -350,7 +349,6 @@ class Sorting {
     const { c, ctx } = this.initCanvasVariable();
     const { w, h } = this.initWidthHeight();
     for (let i = 0; i < this.list.length; i++) {
-      const hsl = (this.list[i] / this.size) * 360;
       ctx.fillStyle = this.color ? this.getHSL(i) : this.getColor(i);
       ctx.beginPath();
       ctx.arc(i * w, c.height - this.list[i] * h, w / 2, 0, 2 * Math.PI);
@@ -363,13 +361,25 @@ class Sorting {
     const { w, h } = this.initWidthHeight();
     for (let i = 0; i < this.list.length - 1; i++) {
       ctx.strokeStyle = this.getColor(i);
-      const hsl = (this.list[i] / this.size) * 360;
       ctx.strokeStyle = this.color ? this.getHSL(i) : this.getColor(i);
       ctx.strokeWidth = 3;
       ctx.beginPath();
       ctx.moveTo(i * w, c.height - this.list[i] * h);
       ctx.lineTo(i * w + w, c.height - this.list[i + 1] * h);
       ctx.stroke();
+    }
+  }
+
+  drawPyramid() {
+    const { c, ctx } = this.initCanvasVariable();
+    const { w, h } = this.initWidthHeight();
+    for (let i = 0; i < this.list.length; i++) {
+      ctx.fillStyle = this.color ? this.getHSL(i) : this.getColor(i);
+
+      // ctx.fillRect(i * w, c.height - this.list[i] * h, w, this.list[i] * h);
+      const x = c.width / 2 - (w * this.list[i]) / 2;
+      const y = i * h;
+      ctx.fillRect(x, y + c.height * 0.2, w * this.list[i], h);
     }
   }
 
@@ -385,6 +395,8 @@ class Sorting {
       case "lines":
         this.drawLines();
         break;
+      case "pyramid":
+        this.drawPyramid();
       default:
         console.log(this.drawType);
         break;
