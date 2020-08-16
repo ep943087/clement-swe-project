@@ -1,4 +1,4 @@
-class Sorting {
+export default class Sorting {
   size = 25;
   list = [];
   solving = false;
@@ -280,7 +280,10 @@ class Sorting {
     return { c: this.c, ctx: this.c.getContext("2d") };
   }
   initWidthHeight() {
-    return { w: c.width / this.size, h: (0.8 * c.height) / this.size };
+    return {
+      w: this.c.width / this.size,
+      h: (0.8 * this.c.height) / this.size,
+    };
   }
 
   getHSL(i) {

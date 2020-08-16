@@ -1,3 +1,5 @@
+import Sorting from "./sorting.js";
+
 window.onload = () => {
   draw();
 };
