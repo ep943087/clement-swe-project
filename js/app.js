@@ -1,9 +1,5 @@
 import Sorting from "./sorting.js";
 
-window.onload = () => {
-  draw();
-};
-
 const c = document.getElementById("myCanvas");
 const ctx = c.getContext("2d");
 const sortingSim = new Sorting(c);
@@ -40,3 +36,5 @@ const draw = () => {
   sortingSim.solve();
   sortingSim.draw();
 };
+
+draw();
