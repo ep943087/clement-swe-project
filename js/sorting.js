@@ -1,15 +1,15 @@
 export default class Sorting {
-  size = 25;
-  list = [];
-  solving = false;
-  solveType = "bubble";
-  speed = 1;
-  drawType = "rectangles";
-  color = true;
-  background = "black";
-  defaultColor = "white";
   constructor(c) {
     this.c = c;
+    this.size = 25;
+    this.list = [];
+    this.solving = false;
+    this.solveType = "bubble";
+    this.speed = 1;
+    this.drawType = "rectangles";
+    this.color = true;
+    this.background = "black";
+    this.defaultColor = "white";
     this.scramble();
   }
   solve() {
